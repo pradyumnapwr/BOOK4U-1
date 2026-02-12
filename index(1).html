@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book4U - Your One-Stop Bookstore</title>
-    <meta name="description"
-        content="Discover a world of books at unbeatable prices. Book4U offers educational, fiction, non-fiction, and children's books.">
+    <meta name="description" content="Discover a world of books at unbeatable prices. Book4U offers educational, fiction, non-fiction, and children's books.">
     <link rel="stylesheet" href="style (1).css">
 </head>
 
 <body>
-    
+
     <header>
         <div class="logo">
             <img src="assets/logo.png" alt="Book4U Logo">
@@ -105,7 +104,7 @@
                             Cart</button>
                     </div>
                     <div class="product-card">
-                        <img src="assets/book6.jpg" alt="History of Time" class="book-img">
+                        <img src="assets/book6.png" alt="History of Time" class="book-img">
                         <h4>History of Time</h4>
                         <p>Stephen H.</p>
                         <p class="price">$15.75</p>
@@ -145,77 +144,89 @@
     </footer>
 
     <script src="script (1).js"></script>
-<style>
-    /* 1. The Pulse Animation to grab attention */
-    @keyframes pulse-blue {
-        0% { box-shadow: 0 0 0 0 rgba(71, 45, 167, 0.7); }
-        70% { box-shadow: 0 0 0 15px rgba(74, 144, 226, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(74, 144, 226, 0); }
-    }
-    
-    /* 2. The "Float" Animation for the bubble */
-    @keyframes float {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-5px); }
-        100% { transform: translateY(0px); }
-    }
-</style>
+    <style>
+        /* 1. The Pulse Animation to grab attention */
+        
+        @keyframes pulse-blue {
+            0% {
+                box-shadow: 0 0 0 0 rgba(71, 45, 167, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(74, 144, 226, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
+            }
+        }
+        /* 2. The "Float" Animation for the bubble */
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
 
-<div id="chat-widget" style="display: none; position: fixed; bottom: 90px; right: 25px; width: 340px; background: #fff; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); z-index: 10000; overflow: hidden; font-family: 'Segoe UI', sans-serif; transition: all 0.3s ease;">
-    
-    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 18px; display: flex; align-items: center; justify-content: space-between;">
-        <div style="display: flex; align-items: center; gap: 10px;">
-            <div style="background: white; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; font-size: 20px;">🤖</div>
-            <div>
-                <div style="font-weight: bold; font-size: 15px;">BOOK4U AI</div>
-                <div style="font-size: 11px; opacity: 0.9;">● Online & Ready</div>
+    <div id="chat-widget" style="display: none; position: fixed; bottom: 90px; right: 25px; width: 340px; background: #fff; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); z-index: 10000; overflow: hidden; font-family: 'Segoe UI', sans-serif; transition: all 0.3s ease;">
+
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 18px; display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="background: white; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; font-size: 20px;">🤖</div>
+                <div>
+                    <div style="font-weight: bold; font-size: 15px;">BOOK4U AI</div>
+                    <div style="font-size: 11px; opacity: 0.9;">● Online & Ready</div>
+                </div>
+            </div>
+            <span onclick="toggleChat()" style="cursor: pointer; font-size: 20px; opacity: 0.8; transition: 0.2s;">✕</span>
+        </div>
+
+        <div id="chat-messages" style="height: 320px; overflow-y: auto; padding: 20px; background: #f4f7f6; display: flex; flex-direction: column; gap: 15px;">
+            <div style="display: flex; gap: 10px;">
+                <div style="font-size: 24px;">🤖</div>
+                <div style="background: white; padding: 12px 16px; border-radius: 0 15px 15px 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: #333; font-size: 14px; line-height: 1.5;">
+                    <strong>Hi there! 👋</strong><br> I can help you find the perfect book. Try asking: <em>"Suggest a mystery novel."</em>
+                </div>
             </div>
         </div>
-        <span onclick="toggleChat()" style="cursor: pointer; font-size: 20px; opacity: 0.8; transition: 0.2s;">✕</span>
-    </div>
 
-    <div id="chat-messages" style="height: 320px; overflow-y: auto; padding: 20px; background: #f4f7f6; display: flex; flex-direction: column; gap: 15px;">
-        <div style="display: flex; gap: 10px;">
-            <div style="font-size: 24px;">🤖</div>
-            <div style="background: white; padding: 12px 16px; border-radius: 0 15px 15px 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: #333; font-size: 14px; line-height: 1.5;">
-                <strong>Hi there! 👋</strong><br>
-                I can help you find the perfect book. Try asking: <em>"Suggest a mystery novel."</em>
+        <div style="padding: 15px; border-top: 1px solid #eee; background: white;">
+            <div style="position: relative;">
+                <input type="text" id="user-input" placeholder="Type your question..." style="width: 100%; padding: 14px 45px 14px 15px; border: 1px solid #e1e4e8; border-radius: 25px; outline: none; font-size: 14px; background: #f9f9f9; box-sizing: border-box;">
+                <button style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: #764ba2; color: white; border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.2s;">➤</button>
             </div>
+            <div style="text-align: center; font-size: 10px; color: #999; margin-top: 8px;">Powered by Groq AI</div>
         </div>
     </div>
 
-    <div style="padding: 15px; border-top: 1px solid #eee; background: white;">
-        <div style="position: relative;">
-            <input type="text" id="user-input"  placeholder="Type your question..." style="width: 100%; padding: 14px 45px 14px 15px; border: 1px solid #e1e4e8; border-radius: 25px; outline: none; font-size: 14px; background: #f9f9f9; box-sizing: border-box;">
-            <button style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: #764ba2; color: white; border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.2s;">➤</button>
-        </div>
-        <div style="text-align: center; font-size: 10px; color: #999; margin-top: 8px;">Powered by Groq AI</div>
+    <div id="chat-bubble" onclick="toggleChat()" style="position: fixed; bottom: 90px; right: 30px; background: white; padding: 10px 15px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); z-index: 9999; font-family: sans-serif; font-size: 14px; color: #333; cursor: pointer; animation: float 3s ease-in-out infinite; transform-origin: bottom right;">
+        Need a book suggestion? 📚
+        <div style="position: absolute; bottom: -8px; right: 20px; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 8px solid white;"></div>
+        <div onclick="event.stopPropagation(); document.getElementById('chat-bubble').style.display='none'" style="position: absolute; top: -8px; right: -8px; background: #eee; color: #555; border-radius: 50%; width: 18px; height: 18px; font-size: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer;">✕</div>
     </div>
-</div>
 
-<div id="chat-bubble" onclick="toggleChat()" style="position: fixed; bottom: 90px; right: 30px; background: white; padding: 10px 15px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); z-index: 9999; font-family: sans-serif; font-size: 14px; color: #333; cursor: pointer; animation: float 3s ease-in-out infinite; transform-origin: bottom right;">
-    Need a book suggestion? 📚
-    <div style="position: absolute; bottom: -8px; right: 20px; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 8px solid white;"></div>
-    <div onclick="event.stopPropagation(); document.getElementById('chat-bubble').style.display='none'" style="position: absolute; top: -8px; right: -8px; background: #eee; color: #555; border-radius: 50%; width: 18px; height: 18px; font-size: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer;">✕</div>
-</div>
-
-<button onclick="toggleChat()" style="position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 50%; box-shadow: 0 5px 20px rgba(118, 75, 162, 0.4); cursor: pointer; z-index: 10000; font-size: 28px; display: flex; align-items: center; justify-content: center; animation: pulse-blue 2s infinite;">
+    <button onclick="toggleChat()" style="position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 50%; box-shadow: 0 5px 20px rgba(118, 75, 162, 0.4); cursor: pointer; z-index: 10000; font-size: 28px; display: flex; align-items: center; justify-content: center; animation: pulse-blue 2s infinite;">
     💬
 </button>
 
-<script>
-    function toggleChat() {
-        const widget = document.getElementById('chat-widget');
-        const bubble = document.getElementById('chat-bubble');
-        
-        if (widget.style.display === 'none' || widget.style.display === '') {
-            widget.style.display = 'block';
-            bubble.style.display = 'none'; // Hide the bubble when chat is open
-        } else {
-            widget.style.display = 'none';
+    <script>
+        function toggleChat() {
+            const widget = document.getElementById('chat-widget');
+            const bubble = document.getElementById('chat-bubble');
+
+            if (widget.style.display === 'none' || widget.style.display === '') {
+                widget.style.display = 'block';
+                bubble.style.display = 'none'; // Hide the bubble when chat is open
+            } else {
+                widget.style.display = 'none';
+            }
         }
-    }
-</script>
+    </script>
 </body>
 
 </html>
